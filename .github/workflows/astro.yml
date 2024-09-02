@@ -56,7 +56,8 @@ jobs:
           fi
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-      - run: bun run install
+      - run: bun install
+      - run: bun run build
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

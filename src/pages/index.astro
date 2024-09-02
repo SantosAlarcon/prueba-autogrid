@@ -1,5 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Resize from "../components/Resize.astro"
 ---
 
 <Layout title="Prueba de auto-grid">
@@ -7,21 +8,22 @@ import Layout from '../layouts/Layout.astro';
     <p>Esta es una demostración de cómo funciona el <b>grid automático</b> usando la propiedad "auto-fit" de <b>grid</b>.</p> 
 	<p>Arrastra la ventana por los laterales para reducir la anchura y comprobar cómo se adaptan los distintos elementos del grid a X resolución, y sin <b>media queries</b> adicionales.</p>
     <main class="autogrid">
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
-	<span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
+        <span>Elemento del grid</span>
     </main>
+    <Resize />
 </Layout>
 
 <style>
@@ -50,10 +52,10 @@ import Layout from '../layouts/Layout.astro';
 	    padding: 3rem 1rem;
 
 	    & > span {
-		border: 1px solid var(--border);
-		padding: 1.5rem 0;
-		border-radius: .5rem;
-		box-shadow: 0 .5rem .5rem var(--box-shadow);
+            border: 1px solid var(--border);
+            padding: 1.5rem 0;
+            border-radius: .5rem;
+            box-shadow: 0 .5rem .5rem var(--box-shadow);
 	    }
 	}
 

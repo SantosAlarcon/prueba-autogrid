@@ -1,0 +1,19 @@
+---
+---
+
+<script type="module">
+const anchura = document.querySelector("#resize__container span")
+
+    window.addEventListener("DOMContentLoaded", () => {
+        anchura.innerHTML = window.innerWidth
+    })
+
+
+    window.addEventListener("resize", () => {
+        anchura.innerHTML = window.innerWidth
+    })
+</script>
+
+<section id="resize__container">
+    <h3>Anchura actual: <span>0</span> px</h3>
+</section>

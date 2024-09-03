@@ -6,7 +6,7 @@ import Resize from "../components/Resize.astro"
 <Layout title="Prueba de auto-grid">
     <h1>Prueba de autogrid</h1>
     <p>Esta es una demostración de cómo funciona el <b>grid automático</b> usando la propiedad "auto-fit" de <b>grid</b>.</p> 
-	<p>Arrastra la ventana por los laterales para reducir la anchura y comprobar cómo se adaptan los distintos elementos del grid a X resolución, y sin <b>media queries</b> adicionales.</p>
+    <p>Arrastra la ventana por los laterales para reducir la anchura y comprobar cómo se adaptan los distintos elementos del grid a X resolución, y sin <b>media queries</b> adicionales.</p>
     <main class="autogrid">
         <span>Elemento del grid</span>
         <span>Elemento del grid</span>
@@ -28,12 +28,12 @@ import Resize from "../components/Resize.astro"
 
 <style>
 	main {
-		margin: auto;
-		padding: 1rem;
-		max-width: calc(100% - 5rem);
-		color: var(--foreground);
-		font-size: 20px;
-		line-height: 1.6;
+	    margin: auto;
+	    padding: 1rem;
+	    max-width: calc(100% - 5rem);
+	    color: var(--foreground);
+	    font-size: 20px;
+	    line-height: 1.6;
 	}
 
 	p {
@@ -44,7 +44,7 @@ import Resize from "../components/Resize.astro"
 	}
 
 	.autogrid {
-		display: grid;
+	    display: grid;
 	    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	    border: 1px solid var(--border);
 	    gap: 1.5rem;
@@ -52,17 +52,22 @@ import Resize from "../components/Resize.astro"
 	    padding: 3rem 1rem;
 
 	    & > span {
-            border: 1px solid var(--border);
-            padding: 1.5rem 0;
-            border-radius: .5rem;
-            box-shadow: 0 .5rem .5rem var(--box-shadow);
+		border: 1px solid var(--border);
+		padding: 1.5rem 0;
+		border-radius: .5rem;
+		box-shadow: 0 .5rem .5rem var(--box-shadow);
+		background: linear-gradient(#eef 50%, var(--background-end-gradient) 100%);
+
+		@media (prefers-color-scheme: dark) {
+		    background: linear-gradient(#001 50%, var(--background-end-gradient) 100%);
+		}
 	    }
 	}
 
 	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
+	    font-size: 4rem;
+	    font-weight: 700;
+	    line-height: 1;
+	    text-align: center;
 	}
 </style>

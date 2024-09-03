@@ -1,54 +1,30 @@
-# Astro Starter Kit: Basics
+# Prueba de autogrid con Astro
 
-```sh
-npm create astro@latest -- --template basics
+Esta es una demostración hecha con [Astro](https://astro.build) del poder del **grid** de CSS para crear una estructura de rejilla responsive sin usar demasiadas **media queries**, con tal sólo una línea de CSS:
+
+```css
+.autogrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+En la parte inferior de la pantalla hay un componente que muestra la anchura de la ventana, que viene de perlas para los dispositivos móviles como smartphones y tablets.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Demostración
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+El enlace de la demostración está en el enlace de la derecha, que está alojada en **GitHub Pages**.
 
-## 🚀 Project Structure
+## 🧞 Comandos
 
-Inside of your Astro project, you'll see the following folders and files:
+Todos los comandos se ejecutan desde la raíz del proyecto, desde la terminal:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Instala las dependencias                         |
+| `npm run dev`             | Arranca el servidor de desarrollo en `localhost:4321`      |
+| `npm run build`           | Construye la versión de producción en `./dist/`          |
+| `npm run preview`         | Previsualiza la versión de despliegue en local, antes del despliegue     |
+| `npm run astro ...`       | Ejecuta comandos de la CLI como `astro add`, `astro check` |
+| `npm run astro -- --help` | Obtener ayuda de la CLI de Astro                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
